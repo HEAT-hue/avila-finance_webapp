@@ -3,9 +3,9 @@ import { Dashboard as UserDashboard } from "../../components"
 
 function DashboardPage() {
     return (
-        <>
+        <div>
             <UserDashboard />
-        </>
+        </div>
     )
 }
 

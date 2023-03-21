@@ -1,12 +1,18 @@
 // jshint esversion:6
 import { StarsSVG, EmailSVG, KeySVG, LogoSVG } from "../svg";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Login() {
 
     const [emailInput, setEmailInput] = useState<string>("");
     const [passwordInput, setPasswordInput] = useState<string>("");
+
+    const navigate = useNavigate();
+
+    function handleCreateAccountSubmit() {
+        navigate("/dashboard");
+    }
 
     return (
         <>
@@ -53,7 +59,7 @@ function Login() {
                     <p className="text-pry font-bold text-lg">Forgot Password</p>
                 </div>
 
-                <div className="mt-[1rem] flex flex-col gap-y-[1.7rem]">
+                <div className="mt-[1rem] flex flex-col gap-y-[1.7rem]" onClick={handleCreateAccountSubmit}>
                     <button className="py-[14px] w-full text-xl text-white font-bold rounded-md outline-none bg-pry hover:bg-[#011114]">Create Account</button>
                     <button className="py-[14px] w-full text-xl text-white font-bold rounded-md outline-none bg-info">GOOGLE SIGN IN</button>
                     <button></button>

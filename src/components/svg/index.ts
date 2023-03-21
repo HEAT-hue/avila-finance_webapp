@@ -3,3 +3,7 @@ export { EmailSVG } from "./EmailSVG";
 export { KeySVG } from "./KeySVG";
 export { ArrowClockwiseSVG } from "./ArrowClockwiseSVG";
 export { StarsSVG } from "./StarsSVG";
+export { PersonFillSVG } from "./PersonFIllSVG";
+export { CalendarSVG } from "./CalendarSVG";
+export { DashSVG } from "./DashSVG";
+export { AddSVG } from "./AddSVG";

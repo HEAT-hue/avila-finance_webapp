@@ -1,5 +1,5 @@
 // jshint esversion:6
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { EmailSVG, KeySVG, ArrowClockwiseSVG, LogoSVG } from "../svg";
 
@@ -9,8 +9,10 @@ function SignUp() {
     const [passwordInput, setPasswordInput] = useState<string>("");
     const [confirmPassword, setConfirmPassword] = useState<string>("");
 
-    function handleCreateAccountSubmitForm() {
+    const navigate = useNavigate();
 
+    function handleCreateAccountSubmitForm() {
+        navigate("/dashboard");
     }
 
     function handleGoogleSignInForm() {
@@ -36,7 +38,7 @@ function SignUp() {
 
                 {/* Form Fields */}
                 <div className="mt-10 flex flex-col gap-y-7">
-                    <div className="flex h-[45px] w-full relative">
+                    <div className="flex h-[3rem] w-full relative">
                         <div className=" absolute left-[5px] h-full max-w-content flex items-center px-[5px] text-gray-600"><EmailSVG size={20} /></div>
                         <input className="w-full h-full pl-[3rem] pr-2 text-[black] text-[1rem] outline-none focus:border-none" type="email" value={emailInput} placeholder="Email" onChange={(e) => {
                             setEmailInput(e.target.value);
@@ -45,7 +47,7 @@ function SignUp() {
                         <label className="inputBorderB"></label>
                         <label className="inputBorderL"></label>
                     </div>
-                    <div className="flex h-[45px] w-full relative">
+                    <div className="flex h-[3rem] w-full relative">
                         <div className=" absolute left-[5px] h-full max-w-content flex items-center px-[5px] text-gray-600"><KeySVG size={20} /></div>
                         <input className="w-full h-full pl-[3rem] text-[black] text-[1rem] outline-none focus:border-none" type="password" value={passwordInput} placeholder="Password" onChange={(e) => {
                             setPasswordInput(e.target.value);
@@ -54,7 +56,7 @@ function SignUp() {
                         <label className="inputBorderB"></label>
                         <label className="inputBorderL"></label>
                     </div>
-                    <div className="flex h-[45px] w-full relative">
+                    <div className="flex h-[3rem] w-full relative">
                         <div className=" absolute left-[5px] h-full max-w-content flex items-center px-[5px] text-gray-600"><ArrowClockwiseSVG size={20} /></div>
                         <input className="w-full h-full pl-[3rem] text-[black] text-[1rem] outline-none focus:border-none" type="password" value={confirmPassword} placeholder="Confirm Password" onChange={(e) => {
                             setConfirmPassword(e.target.value);
@@ -65,7 +67,7 @@ function SignUp() {
                     </div>
                 </div>
 
-                <div className="mt-[3rem] flex flex-col gap-y-[1.5rem]">
+                <div className="mt-[3rem] flex flex-col gap-y-[1.5rem]" onClick={handleCreateAccountSubmitForm}>
                     <button className="py-[14px] w-full text-md text-white font-bold rounded-md outline-none bg-pry hover:bg-[#011114]">Create Account</button>
                     <button className="py-[14px] w-full text-md text-white font-bold rounded-md outline-none bg-info">GOOGLE SIGN IN</button>
                 </div>
