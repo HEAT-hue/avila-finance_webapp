@@ -3,7 +3,9 @@
 function Dashboard() {
     return (
         <>
-            <div>This is the main User dashboard Page</div>
+            <div>
+                This is User Dashboard  
+            </div>
         </>
     );
 }
