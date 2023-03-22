@@ -13,7 +13,7 @@ interface DateItemProps {
 function DateItem({ id, title, desc, income, amount }: DateItemProps) {
     return (
         <>
-            <div className="bg-[white] py-2 px-4 border-b-[1px] flex items-center gap-x-3">
+            <div className="bg-[white] py-2 px-4 border-b-[1px] border-b-[#d6d4d4] flex items-center gap-x-3">
                 <span className="text-[grey]"><PersonFillSVG size={16} /></span>
                 <div className="flex justify-between w-full">
                     <span className="text-sm text-[#4d3838]">{title}</span>

@@ -8,7 +8,7 @@ function BalanceView() {
     return (
         <>
             {/* Account details */}
-            <div className="w-full p-5 bg-blue-900 flex flex-col gap-y-4 rounded">
+            <div className="w-full h-full p-5 bg-blue-900 flex flex-col gap-y-4 rounded">
                 <div className="flex justify-between">
                     <div>
                         <h2 className="text-[#ffffffd3] text-[18px]">Balance</h2>

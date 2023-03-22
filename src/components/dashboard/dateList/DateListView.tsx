@@ -13,7 +13,7 @@ function DateListView({ dateId, transactions }: DateListViewProps) {
 
     return (
         <>
-            <div className="bg-[#f0ecec] text-[#9c9999] text-sm py-1 px-[1rem]">{`${day} ${month}, ${year}`}</div>
+            <div className="bg-[#f0ecec91] text-[#9c9999] text-sm py-1 px-[1rem]">{`${day} ${month}, ${year}`}</div>
             <>
                 {transactions.map((transaction) => {
                     return <DateItem {...transaction} />
