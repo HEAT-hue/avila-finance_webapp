@@ -15,7 +15,7 @@ function Home() {
 
     return (
         <>
-            <main className="bg-homeImg1 bg-no-repeat bg-cover bg-center relative w-full h-screen">
+            <main className="bg-[url('https://images.pexels.com/photos/3213283/pexels-photo-3213283.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-no-repeat bg-cover bg-center relative w-full h-screen">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#000000de] text-white py-[2rem] px-[1.5rem]">
                     <div className="flex justify-between items-center">
                         <div className="flex gap-2 items-center">
